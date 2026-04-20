@@ -1,6 +1,6 @@
 # Automotive OBD-II Diagnostic Scanner
 
-LabVIEW-based vehicle diagnostic tool capable of requesting live OBD-II PIDs, filtering CAN traffic, reading DTC fault codes, and clearing vehicle errors.
+LabVIEW-based vehicle diagnostic tool capable of requesting live OBD-II PIDs, filtering CAN traffic, reading, and clearing DTC fault codes.
 
 ---
 
