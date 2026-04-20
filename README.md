@@ -82,6 +82,6 @@ The system simultaneously filters CAN traffic to identify and display only relev
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Gael Alejandro Morales Rodríguez
