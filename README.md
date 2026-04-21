@@ -25,6 +25,20 @@ The system is structured in modular layers:
    - Sends and receives CAN frames
      
 2. **OBD-II REQUEST HANDLER**
+   - Divides the tasks between PID request queries and DTC reading process.
+
+3. **FRAME PARSERS**
+   - Extracts the payload data from the CAN messages.
+   - Identifies the responses filtering the data based on CAN IDs
+
+4. **PID/DTC Processing**
+   - Decodes the raw data into readable values to be displayed on the UI.
+   - Interprets diagnostic trouble codes showing the error code and identifying which module is at fault.
+  
+5. **User Interface**
+   - Displays real-time vehicle parameters
+   - Shows system status and diagnostic results
+   - Allows the user to select certain PIDs and erase DTCs.
 
 ---
 
