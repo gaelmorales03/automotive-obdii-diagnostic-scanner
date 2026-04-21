@@ -1,62 +1,30 @@
 # Automotive OBD-II Diagnostic Scanner
 
-LabVIEW-based vehicle diagnostic tool capable of requesting live OBD-II PIDs, filtering CAN traffic, reading, and clearing DTC fault codes.
+This project implements a vehicle diagnostic scanner capable of sending OBD-II requests and intepreting ECU responses over CAN communication.
+
+The system supports real-time PID and Diagnostic Trouble Code (DTC) management, simulating the behaviour of industry-level automotive diagnostics.
 
 ---
 
-## Overview
+## Features
 
-This project consists of an automotive diagnostic interface developed in LabVIEW and tested on real production vehicles.
-
-The system establishes an OBD-II diagnostic session, clears previous CAN traffic, and provides an interactive HMI dashboard for requesting live vehicle parameters.
-
-Validated on:
-
-* Nissan Sentra 2020
-* Lincoln MKZ Hybrid 2018
-* Honda HRV 2017
-* Suzuki Swift 2022
-* Ford Fiesta 2019
+- Send OBD-II requests (Mode 01, Mode 03, Mode 04)
+- Read en decode vehice PIDs (RPM, Fuel level, Battery Voltage, Linear speed, etc.)
+- Retrieve and clear Diagnostic Trouble Codes (DTCs)
+- Real-time CAN processing.
+- Modular architecture for communication and data parsing.
 
 ---
 
-## Core Features
+## System architecture
 
-✅ Start diagnostic session via OBD-II
-✅ Real-time PID requests
-✅ Fuel level monitoring
-✅ Vehicle speed reading
-✅ Battery / voltage values
-✅ CAN message filtering
-✅ Read Diagnostic Trouble Codes (DTCs)
-✅ Clear DTC fault codes
-✅ Graphical HMI interface in LabVIEW
+The system is structured in modular layers:
 
----
-
-## How It Works
-
-Each UI switch sends a specific OBD-II request to the vehicle ECU.
-
-Examples:
-
-* Fuel percentage
-* Linear speed
-* Voltage
-* Additional live sensor parameters
-
-The system simultaneously filters CAN traffic to identify and display only relevant messages associated with each request.
-
----
-
-## Technologies
-
-* LabVIEW
-* OBD-II Protocol
-* CAN Bus
-* Automotive Diagnostics
-* HMI Development
-* Real Vehicle Testing
+1. **CAN INTERFACE**
+   - Handles the communication with the vehicle ECU.
+   - Sends and receives CAN frames
+     
+2. **OBD-II REQUEST HANDLER**
 
 ---
 
@@ -69,16 +37,6 @@ The system simultaneously filters CAN traffic to identify and display only relev
 | Honda HRV          | 2017       |
 | Suzuki Swift       | 2022       |
 | Ford Fiesta        | 2019       |
-
----
-
-## Applications
-
-* Vehicle diagnostics
-* ECU communication analysis
-* CAN reverse engineering
-* Automotive validation
-* Engineering tools development
 
 ---
 
