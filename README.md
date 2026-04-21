@@ -16,6 +16,16 @@ The system supports real-time PID and Diagnostic Trouble Code (DTC) management, 
 
 ---
 
+## Implementation details 
+
+The system was implemented in LabVIEW using a modular block-diagram architecture.
+
+- CAN frames are processed as byte arrays (payload[0-7])
+- Case structures are used to interpret PIDs and diagnostic responses, as well as filtering data the user wants.
+- Data flows through multiple processing stages before visualization (the data is decoded and filtered before arriving to the UI).
+
+---
+
 ## System architecture
 
 The system is structured in modular layers:
